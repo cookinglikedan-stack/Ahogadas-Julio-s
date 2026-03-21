@@ -1,0 +1,1098 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Dogos Julio's - Las mejores hamburguesas, hot dogs y tortas de Tonalá, Jalisco">
+    <title>Dogos Julio's | Hamburguesas, Hot Dogs & Tortas - Tonalá</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --amarillo-mostaza: #FFB800;
+            --rojo-intenso: #E63946;
+            --negro: #1A1A1A;
+            --blanco: #FFFFFF;
+            --gris-claro: #F5F5F5;
+            --gris-texto: #666666;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--blanco);
+            color: var(--negro);
+            line-height: 1.6;
+        }
+
+        /* Header Moderno con Logo */
+        header {
+            background: linear-gradient(135deg, var(--negro) 0%, #2D2D2D 100%);
+            color: var(--blanco);
+            padding: 40px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: repeating-linear-gradient(
+                45deg,
+                transparent,
+                transparent 10px,
+                rgba(255,184,0,0.03) 10px,
+                rgba(255,184,0,0.03) 20px
+            );
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo-container {
+            width: 120px;
+            height: 120px;
+            background: var(--blanco);
+            border-radius: 50%;
+            border: 4px solid var(--amarillo-mostaza);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+        }
+
+        .logo-container img {
+            width: 90%;
+            height: 90%;
+            object-fit: cover;
+        }
+
+        .brand-text {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .logo-dogos {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 4rem;
+            letter-spacing: 0.1em;
+            color: var(--amarillo-mostaza);
+            text-shadow: 3px 3px 0px var(--rojo-intenso);
+            line-height: 1;
+        }
+
+        .tagline {
+            font-size: 1.1rem;
+            color: var(--blanco);
+            opacity: 0.9;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            margin-top: 5px;
+        }
+
+        .location-header {
+            color: var(--amarillo-mostaza);
+            font-size: 0.9rem;
+            margin-top: 10px;
+            font-weight: 600;
+        }
+
+        /* Navegación */
+        nav {
+            background: var(--amarillo-mostaza);
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            padding: 0 20px;
+        }
+
+        .nav-link {
+            color: var(--negro);
+            text-decoration: none;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            font-size: 0.85rem;
+            transition: all 0.3s;
+            padding: 8px 16px;
+            border-radius: 20px;
+        }
+
+        .nav-link:hover {
+            background: var(--rojo-intenso);
+            color: var(--blanco);
+            transform: translateY(-2px);
+        }
+
+        /* Secciones */
+        .section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        .section:nth-child(even) {
+            background: var(--gris-claro);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-icon {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        .section-title {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 3rem;
+            color: var(--negro);
+            letter-spacing: 0.05em;
+            margin-bottom: 10px;
+        }
+
+        .section-subtitle {
+            color: var(--gris-texto);
+            font-size: 1.1rem;
+        }
+
+        /* Items Grandes (Hamburguesas y Hot Dogs) - Proporción 4:5 */
+        .menu-item {
+            background: var(--blanco);
+            border-radius: 16px;
+            overflow: hidden;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            border-left: 5px solid var(--amarillo-mostaza);
+            transition: all 0.3s;
+        }
+
+        .menu-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+            border-left-color: var(--rojo-intenso);
+        }
+
+        .item-image {
+            width: 100%;
+            height: 400px; /* Aumentado para fotos verticales */
+            background: linear-gradient(135deg, #f0f0f0 0%, #e0e0e0 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .item-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center center; /* Centra la imagen */
+            transition: transform 0.5s;
+        }
+
+        .menu-item:hover .item-image img {
+            transform: scale(1.03); /* Efecto más sutil */
+        }
+
+        .item-content {
+            padding: 30px;
+        }
+
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 12px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .item-name {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 2rem;
+            color: var(--negro);
+            letter-spacing: 0.02em;
+            flex: 1;
+        }
+
+        .item-prices {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .price-tag {
+            background: var(--negro);
+            color: var(--amarillo-mostaza);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            white-space: nowrap;
+        }
+
+        .price-tag.with-fries {
+            background: var(--rojo-intenso);
+            color: var(--blanco);
+        }
+
+        .item-desc {
+            color: var(--gris-texto);
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 12px;
+        }
+
+        .item-details {
+            font-size: 0.85rem;
+            color: var(--rojo-intenso);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        /* Grid para items pequeños (Tortas y Otros) - Proporción 1:1 */
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .small-item {
+            background: var(--blanco);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+            border-top: 4px solid var(--amarillo-mostaza);
+            transition: all 0.3s;
+        }
+
+        .small-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+            border-top-color: var(--rojo-intenso);
+        }
+
+        .small-item .item-image {
+            height: 280px; /* Más alto para mejor proporción */
+        }
+
+        .small-item .item-content {
+            padding: 25px;
+            text-align: center;
+        }
+
+        .small-item .item-name {
+            font-size: 1.6rem;
+            margin-bottom: 8px;
+        }
+
+        .small-item .item-desc {
+            font-size: 0.95rem;
+            margin-bottom: 15px;
+        }
+
+        .small-item .price-tag {
+            display: inline-block;
+            font-size: 1.2rem;
+        }
+
+        /* Bebidas - Proporción más horizontal */
+        .drink-item {
+            display: flex;
+            flex-direction: column;
+            background: var(--blanco);
+            border-radius: 16px;
+            overflow: hidden;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            border-left: 5px solid var(--rojo-intenso);
+        }
+
+        .drink-item .item-image {
+            height: 300px; /* Más alto para verticales */
+        }
+
+        .drink-content {
+            padding: 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .drink-info h3 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.8rem;
+            margin-bottom: 5px;
+        }
+
+        .drink-info p {
+            color: var(--gris-texto);
+            font-size: 0.95rem;
+        }
+
+        .drink-prices {
+            display: flex;
+            gap: 10px;
+        }
+
+        .price-pill {
+            background: var(--amarillo-mostaza);
+            color: var(--negro);
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--negro);
+            color: var(--blanco);
+            padding: 60px 20px 30px;
+        }
+
+        .footer-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-section h3 {
+            color: var(--amarillo-mostaza);
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            letter-spacing: 0.05em;
+        }
+
+        .footer-section p, .footer-section a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            line-height: 1.8;
+            font-size: 0.95rem;
+            display: block;
+            margin-bottom: 8px;
+            transition: color 0.3s;
+        }
+
+        .footer-section a:hover {
+            color: var(--amarillo-mostaza);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .social-btn {
+            width: 45px;
+            height: 45px;
+            background: var(--rojo-intenso);
+            color: var(--blanco);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.9rem;
+            transition: all 0.3s;
+        }
+
+        .social-btn:hover {
+            background: var(--amarillo-mostaza);
+            color: var(--negro);
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: rgba(255,255,255,0.6);
+            font-size: 0.9rem;
+        }
+
+        .map-btn {
+            display: inline-block;
+            margin-top: 10px;
+            background: var(--amarillo-mostaza);
+            color: var(--negro);
+            padding: 10px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.9rem;
+            transition: all 0.3s;
+        }
+
+        .map-btn:hover {
+            background: var(--rojo-intenso);
+            color: var(--blanco);
+            transform: translateY(-2px);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .logo-container { width: 100px; height: 100px; }
+            .logo-dogos { font-size: 2.8rem; }
+            .section-title { font-size: 2.2rem; }
+
+            /* En móvil, alturas ligeramente menores pero proporcionadas */
+            .item-image { height: 350px; }
+            .small-item .item-image { height: 250px; }
+            .drink-item .item-image { height: 280px; }
+
+            .item-header { flex-direction: column; }
+            .item-name { font-size: 1.7rem; }
+            .nav-container { gap: 10px; }
+            .nav-link { font-size: 0.75rem; padding: 6px 12px; }
+            .footer-content { grid-template-columns: 1fr; text-align: center; }
+            .social-links { justify-content: center; }
+        }
+
+        @media (max-width: 480px) {
+            .item-image { height: 300px; }
+            .small-item .item-image { height: 220px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-content">
+            <div class="logo-container">
+                <img src="images/logo.png" alt="Dogos Julio's Logo">
+            </div>
+            <div class="brand-text">
+                <div class="logo-dogos">DOGOS JULIO'S</div>
+                <p class="tagline">Hamburguesas • Hot Dogs • Tortas • Más</p>
+                <p class="location-header">📍 Pino Suárez 1 esq. Av. Benito Juárez, Tonalá Centro</p>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <div class="nav-container">
+            <a href="#hamburguesas" class="nav-link">Hamburguesas</a>
+            <a href="#hotdogs" class="nav-link">Hot Dogs</a>
+            <a href="#tortas" class="nav-link">Tortas</a>
+            <a href="#ensaladas" class="nav-link">Ensaladas</a>
+            <a href="#otros" class="nav-link">Otros</a>
+            <a href="#bebidas" class="nav-link">Bebidas</a>
+        </div>
+    </nav>
+
+    <!-- HAMBURGUESAS -->
+    <section id="hamburguesas" class="section">
+        <div class="section-header">
+            <div class="section-icon">🍔</div>
+            <h2 class="section-title">HAMBURGUESAS</h2>
+            <p class="section-subtitle">Jugosas hamburguesas de res con pan fresco y los mejores ingredientes</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-image">
+                <img src="images/hamburguesa-sencilla.jpg" alt="Hamburguesa Sencilla">
+            </div>
+            <div class="item-content">
+                <div class="item-header">
+                    <span class="item-name">Sencilla</span>
+                    <div class="item-prices">
+                        <span class="price-tag">$102</span>
+                        <span class="price-tag with-fries">$132 c/papas</span>
+                    </div>
+                </div>
+                <p class="item-desc">Carne de res jugosa con queso manchego derretido, lechuga fresca, jitomate y aderezo especial de la casa.</p>
+                <span class="item-details">Incluye tocino • Opción sin papas o con papas</span>
+            </div>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-image">
+                <img src="images/hamburguesa-vegetariana.jpg" alt="Hamburguesa Vegetariana">
+            </div>
+            <div class="item-content">
+                <div class="item-header">
+                    <span class="item-name">Vegetariana</span>
+                    <div class="item-prices">
+                        <span class="price-tag">$102</span>
+                        <span class="price-tag with-fries">$132 c/papas</span>
+                    </div>
+                </div>
+                <p class="item-desc">Deliciosa combinación de queso panela fresco, champiñones salteados y piña asada que le da un toque dulce.</p>
+                <span class="item-details">Sin carne • Opción sin papas o con papas</span>
+            </div>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-image">
+                <img src="images/hamburguesa-hawaiana.jpg" alt="Hamburguesa Hawaiana">
+            </div>
+            <div class="item-content">
+                <div class="item-header">
+                    <span class="item-name">Hawaiana</span>
+                    <div class="item-prices">
+                        <span class="price-tag">$114</span>
+                        <span class="price-tag with-fries">$144 c/papas</span>
+                    </div>
+                </div>
+                <p class="item-desc">Carne de res con queso, jamón de pavo, piña asada caramelizada y aderezo especial. El equilibrio perfecto entre dulce y salado.</p>
+                <span class="item-details">Con tocino • Opción sin papas o con papas</span>
+            </div>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-image">
+                <img src="images/hamburguesa-especial.jpg" alt="Hamburguesa Julio's Especial">
+            </div>
+            <div class="item-content">
+                <div class="item-header">
+                    <span class="item-name">Julio's Especial</span>
+                    <div class="item-prices">
+                        <span class="price-tag">$138</span>
+                        <span class="price-tag with-fries">$168 c/papas</span>
+                    </div>
+                </div>
+                <p class="item-desc">La favorita de la casa: carne, queso, jamón, piña, queso panela y salchicha. Todo lo mejor en una sola hamburguesa.</p>
+                <span class="item-details">¡La más completa! • Opción sin papas o con papas</span>
+            </div>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-image">
+                <img src="images/hamburguesa-arrachera.jpg" alt="Hamburguesa Arrachera">
+            </div>
+            <div class="item-content">
+                <div class="item-header">
+                    <span class="item-name">Arrachera</span>
+                    <div class="item-prices">
+                        <span class="price-tag">$148</span>
+                        <span class="price-tag with-fries">$178 c/papas</span>
+                    </div>
+                </div>
+                <p class="item-desc">Tierna arrachera de res marinada (180g), asada a la parrilla con queso manchego y vegetales frescos.</p>
+                <span class="item-details">Porción 180g • Opción sin papas o con papas</span>
+            </div>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-image">
+                <img src="images/hamburguesa-marytierra.jpg" alt="Hamburguesa Mar y Tierra">
+            </div>
+            <div class="item-content">
+                <div class="item-header">
+                    <span class="item-name">Mar y Tierra</span>
+                    <div class="item-prices">
+                        <span class="price-tag">$198</span>
+                        <span class="price-tag with-fries">$228 c/papas</span>
+                    </div>
+                </div>
+                <p class="item-desc">La combinación perfecta: carne de res, jamón, queso panela, piña, salchicha, camarones frescos y queso manchego derretido.</p>
+                <span class="item-details">Con camarones • Opción sin papas o con papas</span>
+            </div>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-image">
+                <img src="images/hamburguesa-camaron.jpg" alt="Hamburguesa de Camarón">
+            </div>
+            <div class="item-content">
+                <div class="item-header">
+                    <span class="item-name">De Camarón</span>
+                    <div class="item-prices">
+                        <span class="price-tag">$156</span>
+                        <span class="price-tag with-fries">$186 c/papas</span>
+                    </div>
+                </div>
+                <p class="item-desc">Camarones frescos a la plancha con queso manchego derretido, aguacate, lechuga y aderezo especial de cilantro.</p>
+                <span class="item-details">Mariscos frescos • Opción sin papas o con papas</span>
+            </div>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-image">
+                <img src="images/hamburguesa-pollo.jpg" alt="Hamburguesa de Pollo">
+            </div>
+            <div class="item-content">
+                <div class="item-header">
+                    <span class="item-name">De Pollo</span>
+                    <div class="item-prices">
+                        <span class="price-tag">$124</span>
+                        <span class="price-tag with-fries">$154 c/papas</span>
+                    </div>
+                </div>
+                <p class="item-desc">Pechuga de pollo marinada a la plancha, jugosa y tierna, con queso, lechuga, jitomate y mayonesa chipotle.</p>
+                <span class="item-details">Pollo marinado • Opción sin papas o con papas</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- HOT DOGS -->
+    <section id="hotdogs" class="section">
+        <div class="section-header">
+            <div class="section-icon">🌭</div>
+            <h2 class="section-title">HOT DOGS</h2>
+            <p class="section-subtitle">El clásico americano con el toque especial de Julio's</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-image">
+                <img src="images/hotdog-tradicional.jpg" alt="Hot Dog Tradicional">
+            </div>
+            <div class="item-content">
+                <div class="item-header">
+                    <span class="item-name">Tradicional</span>
+                    <div class="item-prices">
+                        <span class="price-tag">$57</span>
+                    </div>
+                </div>
+                <p class="item-desc">Salchicha de res jugosa envuelta en tocino crujiente, sobre pan suave con catsup, mostaza y cebolla caramelizada.</p>
+                <span class="item-details">Con tocino</span>
+            </div>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-image">
+                <img src="images/hotdog-vegetariano.jpg" alt="Hot Dog Vegetariano">
+            </div>
+            <div class="item-content">
+                <div class="item-header">
+                    <span class="item-name">Vegetariano</span>
+                    <div class="item-prices">
+                        <span class="price-tag">$57</span>
+                    </div>
+                </div>
+                <p class="item-desc">Deliciosa combinación de queso panela fresco, champiñones salteados y piña asada sobre pan artesanal.</p>
+                <span class="item-details">Sin carne • Opción vegetariana</span>
+            </div>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-image">
+                <img src="images/hotdog-pavo.jpg" alt="Hot Dog Pavo">
+            </div>
+            <div class="item-content">
+                <div class="item-header">
+                    <span class="item-name">Pavo</span>
+                    <div class="item-prices">
+                        <span class="price-tag">$57</span>
+                    </div>
+                </div>
+                <p class="item-desc">Salchicha de pavo cocida al vapor, sin tocino, más ligera pero igual de sabrosa con todos los complementos.</p>
+                <span class="item-details">Cocido en agua • Sin tocino</span>
+            </div>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-image">
+                <img src="images/hotdog-camaron.jpg" alt="Hot Dog de Camarón">
+            </div>
+            <div class="item-content">
+                <div class="item-header">
+                    <span class="item-name">De Camarón</span>
+                    <div class="item-prices">
+                        <span class="price-tag">$84</span>
+                    </div>
+                </div>
+                <p class="item-desc">Camarones frescos a la plancha envueltos en tocino, con queso manchego derretido y salsa especial.</p>
+                <span class="item-details">Especialidad del mar</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- TORTAS -->
+    <section id="tortas" class="section">
+        <div class="section-header">
+            <div class="section-icon">🥖</div>
+            <h2 class="section-title">TORTAS</h2>
+            <p class="section-subtitle">Pan artesanal crujiente relleno de los mejores ingredientes</p>
+        </div>
+
+        <div class="grid-2">
+            <div class="small-item">
+                <div class="item-image">
+                    <img src="images/torta-pierna.jpg" alt="Torta de Pierna">
+                </div>
+                <div class="item-content">
+                    <h3 class="item-name">Pierna</h3>
+                    <p class="item-desc">Carne de pierna de cerdo sazonada y jugosa</p>
+                    <span class="price-tag">$102</span>
+                </div>
+            </div>
+
+            <div class="small-item">
+                <div class="item-image">
+                    <img src="images/torta-jamon.jpg" alt="Torta de Jamón">
+                </div>
+                <div class="item-content">
+                    <h3 class="item-name">Jamón</h3>
+                    <p class="item-desc">Jamón de pavo premium con queso</p>
+                    <span class="price-tag">$102</span>
+                </div>
+            </div>
+
+            <div class="small-item">
+                <div class="item-image">
+                    <img src="images/torta-panela.jpg" alt="Torta de Panela">
+                </div>
+                <div class="item-content">
+                    <h3 class="item-name">Panela</h3>
+                    <p class="item-desc">Queso panela fresco a la plancha</p>
+                    <span class="price-tag">$102</span>
+                </div>
+            </div>
+
+            <div class="small-item">
+                <div class="item-image">
+                    <img src="images/torta-salchicha.jpg" alt="Torta de Salchicha">
+                </div>
+                <div class="item-content">
+                    <h3 class="item-name">Salchicha</h3>
+                    <p class="item-desc">Salchicha de res a la plancha</p>
+                    <span class="price-tag">$102</span>
+                </div>
+            </div>
+
+            <div class="small-item">
+                <div class="item-image">
+                    <img src="images/torta-pollo.jpg" alt="Torta de Pollo">
+                </div>
+                <div class="item-content">
+                    <h3 class="item-name">Pollo</h3>
+                    <p class="item-desc">Pechuga de pollo deshebrada y sazonada</p>
+                    <span class="price-tag">$124</span>
+                </div>
+            </div>
+
+            <div class="small-item">
+                <div class="item-image">
+                    <img src="images/torta-camaron.jpg" alt="Torta de Camarón">
+                </div>
+                <div class="item-content">
+                    <h3 class="item-name">Camarón</h3>
+                    <p class="item-desc">Camarones frescos a la plancha</p>
+                    <span class="price-tag">$158</span>
+                </div>
+            </div>
+
+            <div class="small-item">
+                <div class="item-image">
+                    <img src="images/torta-combinada.jpg" alt="Torta Combinada">
+                </div>
+                <div class="item-content">
+                    <h3 class="item-name">Combinada</h3>
+                    <p class="item-desc">2 ingredientes a elegir de toda la lista</p>
+                    <span class="price-tag">$115</span>
+                </div>
+            </div>
+
+            <div class="small-item">
+                <div class="item-image">
+                    <img src="images/torta-especial.jpg" alt="Torta Julio's Especial">
+                </div>
+                <div class="item-content">
+                    <h3 class="item-name">Julio's Especial</h3>
+                    <p class="item-desc">Pierna, panela, jamón y salchicha</p>
+                    <span class="price-tag">$139</span>
+                </div>
+            </div>
+
+            <div class="small-item">
+                <div class="item-image">
+                    <img src="images/torta-arrachera.jpg" alt="Torta de Arrachera">
+                </div>
+                <div class="item-content">
+                    <h3 class="item-name">Arrachera</h3>
+                    <p class="item-desc">Arrachera de res (180g) a la parrilla</p>
+                    <span class="price-tag">$148</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ENSALADAS Y PAPAS -->
+    <section id="ensaladas" class="section">
+        <div class="section-header">
+            <div class="section-icon">🥗</div>
+            <h2 class="section-title">ENSALADAS & PAPAS</h2>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-image">
+                <img src="images/ensalada.jpg" alt="Ensalada">
+            </div>
+            <div class="item-content">
+                <div class="item-header">
+                    <span class="item-name">Ensalada</span>
+                    <div class="item-prices">
+                        <span class="price-tag">Chica $149</span>
+                        <span class="price-tag with-fries">Grande $194</span>
+                    </div>
+                </div>
+                <p class="item-desc">Fresca ensalada mixta con 5 ingredientes a elegir: pollo, panela, salchicha, jamón, champiñones o res. Con aderezo de la casa.</p>
+            </div>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-image">
+                <img src="images/papas-fritas.jpg" alt="Papas Fritas">
+            </div>
+            <div class="item-content">
+                <div class="item-header">
+                    <span class="item-name">Papas Fritas</span>
+                    <div class="item-prices">
+                        <span class="price-tag">Chicas $61</span>
+                        <span class="price-tag with-fries">Grandes $71</span>
+                    </div>
+                </div>
+                <p class="item-desc">Papas frescas cortadas a mano y fritas hasta quedar doradas y crujientes. Perfectas para acompañar tu comida.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- OTROS -->
+    <section id="otros" class="section">
+        <div class="section-header">
+            <div class="section-icon">🌯</div>
+            <h2 class="section-title">OTROS</h2>
+            <p class="section-subtitle">Más opciones para satisfacer tu antojo</p>
+        </div>
+
+        <div class="grid-2">
+            <div class="small-item">
+                <div class="item-image">
+                    <img src="images/burrita-pierna.jpg" alt="Burrita de Pierna">
+                </div>
+                <div class="item-content">
+                    <h3 class="item-name">Burritas de Pierna</h3>
+                    <p class="item-desc">Tortilla de harina rellena de pierna sazonada</p>
+                    <span class="price-tag">$79</span>
+                </div>
+            </div>
+
+            <div class="small-item">
+                <div class="item-image">
+                    <img src="images/burrita-pollo.jpg" alt="Burrita de Pollo">
+                </div>
+                <div class="item-content">
+                    <h3 class="item-name">Burritas de Pollo</h3>
+                    <p class="item-desc">Tortilla de harina rellena de pollo jugoso</p>
+                    <span class="price-tag">$78</span>
+                </div>
+            </div>
+
+            <div class="small-item">
+                <div class="item-image">
+                    <img src="images/quesadilla.jpg" alt="Quesadilla">
+                </div>
+                <div class="item-content">
+                    <h3 class="item-name">Quesadilla</h3>
+                    <p class="item-desc">Tortilla de harina con queso manchego derretido</p>
+                    <span class="price-tag">$29</span>
+                </div>
+            </div>
+
+            <div class="small-item">
+                <div class="item-image">
+                    <img src="images/quesadilla-camaron.jpg" alt="Quesadilla de Camarón">
+                </div>
+                <div class="item-content">
+                    <h3 class="item-name">Quesadilla de Camarón</h3>
+                    <p class="item-desc">Tortilla con queso y camarones frescos</p>
+                    <span class="price-tag">$81</span>
+                </div>
+            </div>
+
+            <div class="small-item">
+                <div class="item-image">
+                    <img src="images/sincronizada.jpg" alt="Sincronizada">
+                </div>
+                <div class="item-content">
+                    <h3 class="item-name">Sincronizada</h3>
+                    <p class="item-desc">Doble tortilla con jamón y queso gratinado</p>
+                    <span class="price-tag">$69</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BEBIDAS -->
+    <section id="bebidas" class="section">
+        <div class="section-header">
+            <div class="section-icon">🥤</div>
+            <h2 class="section-title">BEBIDAS</h2>
+            <p class="section-subtitle">Refrescantes bebidas para acompañar tu comida</p>
+        </div>
+
+        <div class="drink-item">
+            <div class="item-image">
+                <img src="images/agua-fresca.jpg" alt="Agua Fresca">
+            </div>
+            <div class="drink-content">
+                <div class="drink-info">
+                    <h3>Agua Fresca (Arroz y Jamaica)</h3>
+                    <p>Agua natural tradicional mexicana</p>
+                </div>
+                <div class="drink-prices">
+                    <span class="price-pill">1/2 L $31</span>
+                    <span class="price-pill" style="background: var(--rojo-intenso); color: white;">1 L $49</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="drink-item">
+            <div class="item-image">
+                <img src="images/agua-embotellada.jpg" alt="Agua Embotellada">
+            </div>
+            <div class="drink-content">
+                <div class="drink-info">
+                    <h3>Agua Embotellada</h3>
+                    <p>Agua purificada individual</p>
+                </div>
+                <div class="drink-prices">
+                    <span class="price-pill">$18</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="drink-item">
+            <div class="item-image">
+                <img src="images/refresco.jpg" alt="Refresco">
+            </div>
+            <div class="drink-content">
+                <div class="drink-info">
+                    <h3>Refresco</h3>
+                    <p>Sabores variados de lata o botella</p>
+                </div>
+                <div class="drink-prices">
+                    <span class="price-pill">$34</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="drink-item">
+            <div class="item-image">
+                <img src="images/te-helado.jpg" alt="Té Helado">
+            </div>
+            <div class="drink-content">
+                <div class="drink-info">
+                    <h3>Té Helado</h3>
+                    <p>Té negro frío con limón</p>
+                </div>
+                <div class="drink-prices">
+                    <span class="price-pill">$37</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="drink-item">
+            <div class="item-image">
+                <img src="images/jugo-petit.jpg" alt="Jugo Petit">
+            </div>
+            <div class="drink-content">
+                <div class="drink-info">
+                    <h3>Jugo Petit</h3>
+                    <p>Jugo de frutas natural (sabores según disponibilidad)</p>
+                </div>
+                <div class="drink-prices">
+                    <span class="price-pill">$23</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>📍 Ubicación</h3>
+                <p>Pino Suárez 1 esq.</p>
+                <p>Av. Benito Juárez</p>
+                <p>Tonalá Centro</p>
+                <p>45400 Tonalá, Jal.</p>
+                <a href="https://maps.google.com/?q=Pino+Suárez+1+Tonalá+Jalisco" target="_blank" class="map-btn">Ver en Google Maps</a>
+            </div>
+
+            <div class="footer-section">
+                <h3>📞 Contacto</h3>
+                <p>Ordena al:</p>
+                <a href="https://wa.me/523310433443" target="_blank">WhatsApp: 33 1043 3443</a>
+                <p style="margin-top: 15px;">Horario de atención:</p>
+                <p>Lunes a Domingo</p>
+                <p>[Agregar horario]</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>📱 Síguenos</h3>
+                <p>¡Síguenos para promociones!</p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/Juliosdogos" target="_blank" class="social-btn">f</a>
+                    <a href="https://www.instagram.com/juliosdogos?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="social-btn">IG</a>
+                    <a href="https://wa.me/523310433443" target="_blank" class="social-btn">WA</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div style="font-family: 'Bebas Neue', sans-serif; font-size: 2rem; color: var(--amarillo-mostaza); margin-bottom: 10px;">DOGOS JULIO'S</div>
+            <p style="color: var(--amarillo-mostaza); margin-bottom: 10px;">¡El sabor que te hace volver!</p>
+            <p>© 2026 Dogos Julio's. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
