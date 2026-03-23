@@ -956,71 +956,76 @@
 
     <!-- Contacto/Ubicación -->
     <section id="contacto" class="section info-section">
-        <div class="info-grid">
-            <div class="info-card fade-in">
-                <div class="info-icon">📍</div>
-                <h3 class="info-title">Ubicación</h3>
-                <p class="info-text">
-                    <strong>Pedro Moreno 199</strong><br>
+        <div class="info-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; max-width: 1000px; margin: 0 auto;">
+            
+            <!-- Ubicación -->
+            <div class="info-card" style="background: var(--blanco); border-radius: 20px; padding: 40px; text-align: center; box-shadow: 0 10px 30px rgba(179,27,2,0.1); border-top: 4px solid var(--rojo-brillante); transition: transform 0.3s;">
+                <div class="info-icon" style="width: 80px; height: 80px; background: rgba(238,61,7,0.1); border: 3px solid var(--rojo-brillante); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; font-size: 2rem; color: var(--rojo-brillante);">📍</div>
+                <h3 style="font-family: 'Playfair Display', serif; font-size: 1.8rem; color: var(--rojo-oscuro); margin-bottom: 15px;">Ubicación</h3>
+                <p style="color: var(--gris-texto); line-height: 1.8; margin-bottom: 20px;">
+                    <strong style="color: var(--rojo-oscuro);">Pedro Moreno 199</strong><br>
                     El Mirador<br>
                     45400 Tonalá, Jalisco
                 </p>
                 <a href="https://maps.google.com/?q=Pedro+Moreno+199+El+Mirador+Tonalá+Jalisco" target="_blank" class="btn-gold">Ver en Google Maps</a>
             </div>
 
-            <div class="info-card fade-in">
-                <div class="info-icon">📞</div>
-                <h3 class="info-title">Pedidos</h3>
-                <p class="info-text">
-                    <strong>Número Telefónico:</strong><br>
-                    <a href="tel:523337925862" style="color: var(--rojo-oscuro); text-decoration: none;">33 3792 5862</a><br><br>
-                    <strong>Horario:</strong><br>
-                    Lun-Dom: 10:00 AM - 05:00 PM
+            <!-- Contacto Directo -->
+            <div class="info-card" style="background: var(--blanco); border-radius: 20px; padding: 40px; text-align: center; box-shadow: 0 10px 30px rgba(179,27,2,0.1); border-top: 4px solid var(--amarillo-contorno); transition: transform 0.3s;">
+                <div class="info-icon" style="width: 80px; height: 80px; background: rgba(248,204,136,0.2); border: 3px solid var(--amarillo-contorno); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; font-size: 2rem; color: var(--rojo-brillante);">📞</div>
+                <h3 style="font-family: 'Playfair Display', serif; font-size: 1.8rem; color: var(--rojo-oscuro); margin-bottom: 15px;">Pedidos</h3>
+                <p style="color: var(--gris-texto); line-height: 1.8; margin-bottom: 20px;">
+                    <strong style="color: var(--rojo-oscuro);">WhatsApp:</strong><br>
+                    33 3792 5862<br><br>
+                    <strong style="color: var(--rojo-oscuro);">Horario:</strong><br>
+                    Lunes a Domingo<br>
+                    10:00 AM - 5:00 PM
                 </p>
-                <a href="https://wa.me/523312442991" target="_blank" class="btn-gold">Ordenar por WhatsApp</a>
+                <a href="https://wa.me/523337925862" target="_blank" style="display: inline-block; background: var(--rojo-brillante); color: white; padding: 12px 30px; border-radius: 25px; text-decoration: none; font-weight: 700; transition: all 0.3s;">Ordenar por WhatsApp</a>
             </div>
-            
-            <div class="info-card fade-in">
-                <div class="info-icon">✽</div>
-                <h3 class="info-title">¿Antojo de algo rico por las tardes?</h3>
-                <p class="info-text">
-                    <strong>Checa el menú digital</strong> Dogos Julio´s <br>
-                    <a href="tel:3310433443" style="color: var(--rojo-oscuro); text-decoration: none;">33 1043 3443</a><br><br>
-                    <strong>Horario:</strong><br>
-                    Lun-Dom: 05:00 PM - 12:00 AM
-                </p>
-                <div class="social-links" style="margin-top: 20px;">
-                    <a href="https://cookinglikedan-stack.github.io/Dogos-Julio-s/" target="_blank" class="social-link" style="width: 45px; height: 45px; font-size: 1rem;" title="Página Web">PW</a>
-                </div>
-            </div>
+        </div>
 
-            <div class="info-card fade-in">
-                <div class="info-icon">📱</div>
-                <h3 class="info-title">Síguenos</h3>
-                <p class="info-text">
-                    <strong>Facebook:</strong> @ahogadasjulio<br>
-                    <strong>Instagram:</strong> @ahogadasjulios<br><br>
-                    ¡Síguenos en nuestras redes sociales!
-                </p>
-                <div class="social-links" style="margin-top: 20px;">
-                    <a href="https://www.facebook.com/ahogadasjulio" target="_blank" class="social-link" style="width: 45px; height: 45px; font-size: 1rem;">f</a>
-                    <a href="https://www.instagram.com/ahogadasjulios" target="_blank" class="social-link" style="width: 45px; height: 45px; font-size: 1rem;">IG</a>
-                    <a href="https://wa.me/523312442991" target="_blank" class="social-link" style="width: 45px; height: 45px; font-size: 1rem;">WA</a>
+        <!-- Promoción Dogos Julio's (para las tardes) -->
+        <div style="max-width: 800px; margin: 50px auto 0; background: linear-gradient(135deg, var(--rojo-oscuro) 0%, var(--rojo-brillante) 100%); border-radius: 20px; padding: 40px; color: white; text-align: center; box-shadow: 0 10px 30px rgba(238,61,7,0.3); border: 3px solid var(--amarillo-contorno);">
+            <div style="font-size: 3rem; margin-bottom: 15px;">🌙</div>
+            <h3 style="font-family: 'Playfair Display', serif; font-size: 2.2rem; margin-bottom: 10px; color: var(--amarillo-contorno); text-transform: uppercase; letter-spacing: 0.1em;">¿Antojo de algo rico por las tardes?</h3>
+            <p style="font-size: 1.1rem; margin-bottom: 20px; opacity: 0.95;">Visita nuestro otro restaurante</p>
+            <div style="background: rgba(255,255,255,0.15); border-radius: 15px; padding: 25px; margin: 20px 0; border: 2px solid rgba(248,204,136,0.3);">
+                <h4 style="font-family: 'Playfair Display', serif; font-size: 2rem; margin-bottom: 10px; color: var(--blanco); letter-spacing: 0.05em;">DOGOS JULIO'S</h4>
+                <p style="margin-bottom: 15px; font-size: 1.1rem;">Hamburguesas, Hot Dogs y Tortas</p>
+                <p style="font-size: 1.3rem; font-weight: 700; margin-bottom: 5px; color: var(--amarillo-contorno);">📞 33 1043 3443</p>
+                <p style="font-size: 0.95rem; opacity: 0.9; margin-bottom: 20px;">Lun-Dom: 5:00 PM - 12:00 AM</p>
+                <div style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
+                    <a href="https://cookinglikedan-stack.github.io/Dogos-Julio-s/" target="_blank" style="display: inline-block; background: var(--amarillo-contorno); color: var(--rojo-oscuro); padding: 12px 30px; border-radius: 25px; text-decoration: none; font-weight: 700; transition: all 0.3s;">Ver Menú Digital</a>
+                    <a href="https://wa.me/523310433443" target="_blank" style="display: inline-block; background: white; color: var(--rojo-brillante); padding: 12px 30px; border-radius: 25px; text-decoration: none; font-weight: 700; transition: all 0.3s;">WhatsApp</a>
                 </div>
+            </div>
+        </div>
+
+        <!-- Redes Sociales -->
+        <div style="text-align: center; margin-top: 60px;">
+            <h3 style="font-family: 'Playfair Display', serif; font-size: 1.8rem; margin-bottom: 10px; color: var(--rojo-oscuro);">Síguenos en Redes</h3>
+            <p style="color: var(--gris-texto); margin-bottom: 25px;">@ahogadasjulio • @ahogadasjulios</p>
+            <div class="social-links" style="display: flex; justify-content: center; gap: 20px;">
+                <a href="https://www.facebook.com/ahogadasjulio" target="_blank" class="social-link" style="width: 60px; height: 60px; font-size: 1.5rem; background: var(--blanco); border: 2px solid var(--rojo-brillante); color: var(--rojo-brillante); border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; transition: all 0.3s;">f</a>
+                <a href="https://www.instagram.com/ahogadasjulios" target="_blank" class="social-link" style="width: 60px; height: 60px; font-size: 1.5rem; background: var(--blanco); border: 2px solid var(--rojo-brillante); color: var(--rojo-brillante); border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; transition: all 0.3s;">IG</a>
+                <a href="https://wa.me/523337925862" target="_blank" class="social-link" style="width: 60px; height: 60px; font-size: 1.5rem; background: var(--blanco); border: 2px solid var(--rojo-brillante); color: var(--rojo-brillante); border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; transition: all 0.3s;">WA</a>
             </div>
         </div>
     </section>
 
-    <footer>
-        <div class="footer-logo">Ahogadas Julio's</div>
-        <p style="color: var(--amarillo-contorno); font-style: italic; margin-bottom: 10px;">"Sabor casero, calidad premium"</p>
-        <p style="color: rgba(255,255,255,0.8); font-size: 0.9rem;">Pedro Moreno 172, El Mirador, Tonalá, Jal.</p>
-        <div class="social-links">
-            <a href="https://www.facebook.com/ahogadasjulio" target="_blank" class="social-link">f</a>
-            <a href="https://www.instagram.com/ahogadasjulios" target="_blank" class="social-link">IG</a>
-            <a href="https://wa.me/523312442991" target="_blank" class="social-link">WA</a>
+    <footer style="background: var(--rojo-oscuro); padding: 60px 20px; text-align: center; color: var(--blanco); margin-top: 80px; border-top: 4px solid var(--amarillo-contorno);">
+        <div style="font-family: 'Playfair Display', serif; font-size: 3rem; color: var(--amarillo-contorno); margin-bottom: 10px; font-weight: 700;">AHOGADAS JULIO'S</div>
+        <p style="color: var(--amarillo-contorno); font-style: italic; margin-bottom: 10px; font-size: 1.2rem;">"Sabor casero, calidad premium"</p>
+        <p style="color: rgba(255,255,255,0.8); font-size: 1rem; margin-bottom: 30px;">Tortas Ahogadas • Tacos • Gorditas</p>
+        
+        <div class="social-links" style="display: flex; justify-content: center; gap: 15px; margin-bottom: 30px;">
+            <a href="https://www.facebook.com/ahogadasjulio" target="_blank" style="width: 50px; height: 50px; border: 2px solid var(--amarillo-contorno); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--amarillo-contorno); text-decoration: none; transition: all 0.3s; font-size: 1.2rem;">f</a>
+            <a href="https://www.instagram.com/ahogadasjulios" target="_blank" style="width: 50px; height: 50px; border: 2px solid var(--amarillo-contorno); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--amarillo-contorno); text-decoration: none; transition: all 0.3s; font-size: 1.2rem;">IG</a>
+            <a href="https://wa.me/523337925862" target="_blank" style="width: 50px; height: 50px; border: 2px solid var(--amarillo-contorno); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--amarillo-contorno); text-decoration: none; transition: all 0.3s; font-size: 1.2rem;">WA</a>
         </div>
-        <p class="copyright">© 2026 Ahogadas Julio's. Todos los derechos reservados.</p>
+
+        <p style="color: rgba(255,255,255,0.6); font-size: 0.9rem;">© 2026 Ahogadas Julio's. Todos los derechos reservados.</p>
     </footer>
 
     <script>
@@ -1029,10 +1034,7 @@
                 e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
                 if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
                 }
             });
         });
